@@ -1,0 +1,12 @@
+.filter-link {
+  cursor: pointer;
+  margin-left: 2rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: rgba(255, 255, 255);
+  opacity: 0.6;
+}
+
+.filter-link.activated {
+  opacity: 1;
+}
