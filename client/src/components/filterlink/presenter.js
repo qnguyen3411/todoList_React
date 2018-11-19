@@ -4,7 +4,8 @@ const mapStateToDisplayProps = ({ filter }, ownProps) => {
     [FILTERMODE.SHOW_ALL]: 'Show All',
     [FILTERMODE.SHOW_ACTIVE]: 'Show Active',
     [FILTERMODE.SHOW_FINISHED]: 'Show Finished',
-  }[ownProps.filterMode]
+  }[ownProps.filterMode];
+  
   return {
     active: filter.filterMode === ownProps.filterMode,
     text

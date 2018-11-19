@@ -1,14 +1,18 @@
-import { CHECK_OFF_TODO, DELETE_TODO, ADD_TODO } from '../actions/types';
+import {
+  CHECK_OFF_TODO,
+  DELETE_TODO,
+  ADD_TODO,
+  RECEIVE_TODO
+} from '../actions/types';
 
-const initialState = [
-  { id: 0, text: "Eat eggs", finished: true },
-  { id: 1, text: "Play ball", finished: false },
-  { id: 2, text: "Make cake", finished: false },
-]
+const initialState = [];
 
 export default function (state = initialState, action) {
 
   switch (action.type) {
+
+    case RECEIVE_TODO:
+      return action.payload;
 
     case CHECK_OFF_TODO:
       return checkOffTodo(state, action);
@@ -41,10 +45,9 @@ function deleteTodo(state, { id }) {
   return [...state.slice(0, index), ...state.slice(index + 1)];
 }
 
-function addTodo(state, { text }) {
-  const id = state[state.length - 1].id + 1;
+function addTodo(state, { newTodo }) {
   return [
     ...state,
-    { id, text, finished: false }
+    newTodo
   ];
 }

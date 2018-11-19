@@ -2,8 +2,8 @@ export const CHANGE_TEXT_INPUT = "CHANGE TEXT INPUT";
 
 export const CHECK_OFF_TODO = "CHECK OFF TODO";
 export const DELETE_TODO = "DELETE TODO";
-export const ADD_TODO = "ADD_TODO";
-
+export const ADD_TODO = "ADD TODO";
+export const RECEIVE_TODO = "RECEIVE TODO";
 
 export const CHANGE_FILTER_MODE = "CHANGE FILTER MODE";
 export const FILTERMODE = {
