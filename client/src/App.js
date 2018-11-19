@@ -3,6 +3,8 @@ import './App.css';
 import TodoList from './components/todo-list';
 import Footer from './components/footer';
 import UserInput from './components/user-input';
+import FilterLink from './components/filterlink';
+import { FILTERMODE } from './actions/types';
 
 class App extends Component {
   render() {
@@ -13,8 +15,12 @@ class App extends Component {
           <UserInput />
           <TodoList />
         </div>
-        <Footer />
-        
+        <Footer>
+          <FilterLink filterMode={FILTERMODE.SHOW_ALL} />
+          <FilterLink filterMode={FILTERMODE.SHOW_ACTIVE} />
+          <FilterLink filterMode={FILTERMODE.SHOW_FINISHED} />
+        </Footer>
+
       </div>
     );
   }

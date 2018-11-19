@@ -1,13 +1,12 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './style.css';
 
-import FilterLink from '../filterlink';
-
-const Footer = () =>
-  <div id="footer">
-    <FilterLink />
-    <FilterLink />
-    <FilterLink />
-  </div>
-
-export default Footer;
+export default class Footer extends Component {
+  render() {
+    return (
+      <div id="footer">
+        {this.props.children}
+      </div>
+    )
+  }
+}

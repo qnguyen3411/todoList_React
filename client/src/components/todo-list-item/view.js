@@ -2,10 +2,15 @@ import React from 'react';
 import './style.css'
 
 const TodoListItem = (
-  { text, checked, crossedOut,
-    onTextOrCheckboxClicked, onDeleteClicked }) => {
+  { text, 
+    checked, 
+    crossedOut,
+    onTextOrCheckboxClicked, 
+    onDeleteClicked }) => {
+      
   const checkBoxClass = checked ? "checkbox checked" : "checkbox";
   const textClass = crossedOut ? "crossed-out" : "";
+
   return (
     <li>
       <div onClick={onTextOrCheckboxClicked} className={checkBoxClass} />

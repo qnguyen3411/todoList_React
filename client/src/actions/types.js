@@ -4,3 +4,10 @@ export const CHECK_OFF_TODO = "CHECK OFF TODO";
 export const DELETE_TODO = "DELETE TODO";
 export const ADD_TODO = "ADD_TODO";
 
+
+export const CHANGE_FILTER_MODE = "CHANGE FILTER MODE";
+export const FILTERMODE = {
+  SHOW_ALL: "SHOW ALL",
+  SHOW_ACTIVE: "SHOW ACTIVE",
+  SHOW_FINISHED: "SHOW FINISHED"
+};

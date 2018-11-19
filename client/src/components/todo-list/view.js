@@ -5,7 +5,8 @@ import './style.css'
 const TodoList = ({ items, onItemClicked, onItemDelete }) =>
   <ul>
     {items.map(({ id, text, checked, crossedOut }) => (
-      <TodoListItem key={id}
+      <TodoListItem 
+        key={id}
         text={text}
         checked={checked}
         crossedOut={crossedOut}
